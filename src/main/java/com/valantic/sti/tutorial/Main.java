@@ -21,7 +21,7 @@ public class Main extends Application {
     @Override
     public void start(final Stage stage) throws IOException {
         window = stage;
-        window.setTitle("Controllers");
+        window.setTitle("Working with Scene Builder");
 
         URL location = getClass().getResource("sample.fxml");
         Parent root = FXMLLoader.load(Objects.requireNonNull(location));
