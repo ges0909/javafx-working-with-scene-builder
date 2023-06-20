@@ -1,7 +1,7 @@
 module com.valantic.sti.tutorial {
     requires javafx.controls;
     requires javafx.fxml;
-    
+
     requires static lombok;
     requires org.slf4j;
 

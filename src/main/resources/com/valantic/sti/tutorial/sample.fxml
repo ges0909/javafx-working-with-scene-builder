@@ -14,10 +14,9 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.valantic.sti.tutorial.Controller">
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.valantic.sti.tutorial.Controller">
    <top>
-      <VBox BorderPane.alignment="CENTER">
+      <VBox nodeOrientation="LEFT_TO_RIGHT" BorderPane.alignment="CENTER">
          <children>
             <MenuBar>
               <menus>
@@ -40,11 +39,11 @@
             </MenuBar>
             <HBox spacing="10.0">
                <children>
-                  <TextField promptText="Username" />
-                  <TextField promptText="Password" />
+                  <TextField fx:id="username" promptText="username" />
+                  <TextField fx:id="password" promptText="password" />
                   <Region HBox.hgrow="ALWAYS" />
                   <Button mnemonicParsing="false" onAction="#loginButtonClocked" text="Log In" />
-                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Settings" />
                </children>
                <VBox.margin>
                   <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />

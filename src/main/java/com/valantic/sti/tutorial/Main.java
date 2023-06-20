@@ -2,8 +2,8 @@ package com.valantic.sti.tutorial;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -12,7 +12,7 @@ import java.util.Objects;
 
 public class Main extends Application {
 
-    Stage window;
+    private Stage window;
 
     public static void main(final String... args) {
         launch(args);
@@ -23,11 +23,12 @@ public class Main extends Application {
         window = stage;
         window.setTitle("Working with Scene Builder");
 
-        URL location = getClass().getResource("sample.fxml");
-        Parent root = FXMLLoader.load(Objects.requireNonNull(location));
+        final URL location = getClass().getResource("sample.fxml");
+        final FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(location));
+        final BorderPane root = loader.load();
 
         final Scene scene = new Scene(root, 800, 500);
-        stage.setScene(scene);
-        stage.show();
+        window.setScene(scene);
+        window.show();
     }
 }
